@@ -1,0 +1,6 @@
+# next.js
+.next/
+.next
+/.next/
+.env
+out/
