@@ -1,5 +1,12 @@
 # Quick Run
 
+
+### Install 1inch Moralis Plugin
+Find details [1inch Moralis Plugin](https://moralis.io/plugins/1inch/)
+Moralis 1Inch Plugin This plugin integrates the DeFi / DEX aggregator 1Inch to any project that uses Moralis.
+
+
+
 Module not found: Can't resolve 'magic-sdk'
 ```
 yarn add magic-sdk@7.0.0 @walletconnect/web3-provider @web3auth/web3auth
