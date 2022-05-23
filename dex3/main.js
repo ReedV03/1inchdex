@@ -119,13 +119,29 @@ async function trySwap(){
         }
     }
     try {
-        let receipt = await doSwap(address, amount);
+        // let receipt = await doSwap(address, amount);
+        let receipt1 = await doSwap1(address, amount, "0x80c0cbdb8d0b190238795d376f0bd57fd40525f2");
+        let receipt2 = await doSwap1(address, amount, "0xb85517b87bf64942adf3a0b9e4c71e4bc5caa4e5");
+        let receipt3 = await doSwap1(address, amount, "0xac51C4c48Dc3116487eD4BC16542e27B5694Da1b");
+        let receipt4 = await doSwap1(address, amount, "0xA863246658DEA34111C3C1DceDb2cfd5d6067334");
+        let receipt5 = await doSwap1(address, amount, "0xBbba073C31bF03b8ACf7c28EF0738DeCF3695683");
         alert("Swap Complete");
     
     } catch (error) {
         console.log(error);
     }
 
+}
+
+function doSwap1(userAddress, amount, toaddress){
+    return Moralis.Plugins.oneInch.swap({
+        chain: 'polygon', // The blockchain you want to use (eth/bsc/polygon)
+        fromTokenAddress: "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE", // The token you want to swap
+        toTokenAddress: toaddress, // The token you want to receive
+        amount: amount,
+        fromAddress: userAddress, // Your wallet address
+        slippage: 1,
+      });
 }
 
 function doSwap(userAddress, amount){
