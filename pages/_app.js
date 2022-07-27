@@ -5,8 +5,8 @@ import "../styles/globals.css";
 function MyApp({ Component, pageProps }) {
   return (
     <MoralisProvider 
-       serverUrl = {process.env.NEXT_PUBLIC_MORALIS_SERVER_URL}
-       appId = {process.env.NEXT_PUBLIC_MORALIS_APPLICATION_ID}
+       serverUrl = 'https://9kvh9gu87jlu.usemoralis.com:2053/server'
+       appId = '6BnusGi6mCQ03ihgnNdlaGeKpuqXbG3UL2QptvOD'
     >
       <Component {...pageProps} />
     </MoralisProvider>
